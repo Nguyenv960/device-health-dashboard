@@ -1,0 +1,17 @@
+{
+    "schema_version":  "1.0",
+    "collector_version":  "0.1.0",
+    "device_id":  "ab646e3c-c5cb-476d-84f2-552a081af335",
+    "run_id":  "fb38cd5d-9e4c-4c61-b9f5-201a947efe58",
+    "collection_started_at_utc":  "2026-11-10T07:25:12Z",
+    "collection_finished_at_utc":  "2026-11-10T07:25:12Z",
+    "metrics":  {
+
+                },
+    "checks":  [
+
+               ],
+    "errors":  [
+                   "Volume Z: not found"
+               ]
+}

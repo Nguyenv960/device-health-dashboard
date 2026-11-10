@@ -1,0 +1,18 @@
+{
+    "schema_version":  "1.0",
+    "collector_version":  "0.1.0",
+    "device_id":  "ab646e3c-c5cb-476d-84f2-552a081af335",
+    "run_id":  "0a7983be-f91f-47d1-a4d2-64a5625ccd9f",
+    "collection_started_at_utc":  "2026-11-10T07:25:34Z",
+    "collection_finished_at_utc":  "2026-11-10T07:25:34Z",
+    "metrics":  {
+                    "disk_total_bytes":  998898995200,
+                    "disk_free_bytes":  554843643904
+                },
+    "checks":  [
+
+               ],
+    "errors":  [
+
+               ]
+}
