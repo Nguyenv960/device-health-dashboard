@@ -1,4 +1,4 @@
-#Personal Device Health and Maintenance Dashboard
+Personal Device Health and Maintenance Dashboard
 
 Currently building a local dashboard that helps me monitor and maintain my Windows desktop and Macbook. It will collect each system's information, store data, flag issues, and track maintenence and troubleshooting issues.
 
