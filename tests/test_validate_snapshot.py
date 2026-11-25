@@ -31,3 +31,29 @@ def test_negative_free_bytes_is_rejected():
     errors = validate_snapshot(snapshot)
 
     assert "disk_free_bytes cannot be negative." in errors
+
+def test_zero_total_bytes_is_rejected():
+    snapshot = load_snapshot("windows_disk_ok.json")
+    snapshot["metrics"]["disk_free_bytes"] = 0
+    snapshot["metrics"]["disk_total_bytes"] = 0
+
+    errors = validate_snapshot(snapshot)
+
+    assert "disk_total_bytes must be greater than zero." in errors
+
+def test_free_bytes_above_total_is_rejected():
+    snapshot = load_snapshot("windows_disk_ok.json")
+    snapshot["metrics"]["disk_free_bytes"] = (snapshot["metrics"]["disk_total_bytes"] + 1)
+
+    errors = validate_snapshot(snapshot)
+
+    assert "disk_free_bytes cannot exceed disk_total_bytes." in errors
+
+def test_empty_metrics_without_error_is_rejected():
+    snapshot = load_snapshot("windows_disk_ok.json")
+    snapshot["metrics"] = {}
+    snapshot["errors"] = []
+
+    errors = validate_snapshot(snapshot)
+
+    assert "Empty metrics must include a collection error." in errors
